@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Candy & Sweets | SoDak Sweet Tooth</title>
+  <meta name="description"
+    content="Browse chocolate, gummies, hard candy, and gift boxes from SoDak Sweet Tooth. Filter by category and price, then sort by what matters to you.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><rect width=%2240%22 height=%2240%22 rx=%2210%22 fill=%22%23ff8716%22/><circle cx=%2216%22 cy=%2220%22 r=%222%22 fill=%22%23fff%22/><circle cx=%2224%22 cy=%2220%22 r=%222%22 fill=%22%23fff%22/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="SoDak Sweet Tooth home">
+        <svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 20 10 13 v14 z" fill="#ff8716" />
+          <rect x="10" y="11" width="20" height="18" rx="9" fill="#ff8716" />
+          <path d="M36 20 30 13 v14 z" fill="#ff8716" />
+          <circle cx="16" cy="20" r="2" fill="#fff" />
+          <circle cx="24" cy="20" r="2" fill="#fff" />
+        </svg>
+        <span class="logo-text">SoDak Sweet Tooth<span>CANDY &amp; SWEETS</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about-contact.html">About</a>
+        <a href="about-contact.html#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-toggle-wrap">
+          <button class="btn-icon search-toggle" aria-label="Search products">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </button>
+          <form class="header-search-form" role="search">
+            <label for="quick-search" class="visually-hidden">Search products</label>
+            <input type="search" id="quick-search" placeholder="Search sweets...">
+            <button type="submit" class="btn-icon" aria-label="Submit search">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m21 21-4.3-4.3" />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <a href="cart.html" class="btn-icon cart-btn" aria-label="View cart">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+          </svg>
+          <span class="cart-count">0</span>
+        </a>
+        <a href="#" class="btn-icon profile-btn" aria-label="Your account">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21a8 8 0 0 0-16 0" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about-contact.html">About</a>
+      <a href="about-contact.html#contact">Contact</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <div class="container breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span><span class="current">Shop</span>
+    </div>
+
+    <div class="container shop-header">
+      <h1>Shop All Sweets</h1>
+      <p>Every product below is made in small batches. Filter by category, set a price range, and sort it your way.</p>
+    </div>
+
+    <div class="container shop-layout">
+      <div class="filter-overlay" id="filter-overlay"></div>
+      <aside class="filter-panel" aria-label="Filter products">
+        <button class="btn btn-secondary btn-sm filter-panel-close" id="filter-panel-close" style="display:none;">Close
+          ✕</button>
+        <h3>Category</h3>
+        <div class="filter-group">
+          <label class="filter-option"><input type="checkbox" data-filter-category value="chocolate"> Chocolate</label>
+          <label class="filter-option"><input type="checkbox" data-filter-category value="gummies"> Gummies</label>
+          <label class="filter-option"><input type="checkbox" data-filter-category value="hard-candy"> Hard
+            Candy</label>
+          <label class="filter-option"><input type="checkbox" data-filter-category value="gift-box"> Gift Boxes</label>
+        </div>
+        <h3>Price</h3>
+        <div class="filter-group">
+          <input type="range" id="price-range" min="5" max="40" value="40" step="1">
+          <div class="price-range-value" id="price-range-value">Up to $40</div>
+        </div>
+        <button class="clear-filters" id="clear-filters" type="button">Clear all filters</button>
+      </aside>
+
+      <div class="shop-main">
+        <div class="shop-toolbar">
+          <button class="mobile-filter-toggle" id="mobile-filter-toggle">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6h16M7 12h10M10 18h4" />
+            </svg>
+            Filters
+          </button>
+          <p class="results-count" id="results-count">Showing products</p>
+          <div class="toolbar-right">
+            <form class="shop-search" role="search">
+              <label for="shop-search-input" class="visually-hidden">Search products</label>
+              <input type="search" id="shop-search-input" placeholder="Search for candy...">
+              <button type="button" aria-label="Search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg></button>
+            </form>
+            <label for="sort-select" class="visually-hidden">Sort products</label>
+            <select id="sort-select" class="sort-select">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="product-grid" id="shop-grid"></div>
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="SoDak Sweet Tooth home">
+            <svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 20 10 13 v14 z" fill="#ff8716" />
+              <rect x="10" y="11" width="20" height="18" rx="9" fill="#ff8716" />
+              <path d="M36 20 30 13 v14 z" fill="#ff8716" />
+              <circle cx="16" cy="20" r="2" fill="#fff" />
+              <circle cx="24" cy="20" r="2" fill="#fff" />
+            </svg>
+            <span class="logo-text">SoDak Sweet Tooth<span>CANDY &amp; SWEETS</span></span>
+          </a>
+          <p>Small-batch candy made in South Dakota and shipped fresh across the country.</p>
+          <div class="social-row">
+            <a href="#" aria-label="SoDak Sweet Tooth on Instagram"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" />
+              </svg></a>
+            <a href="#" aria-label="SoDak Sweet Tooth on Facebook"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" />
+              </svg></a>
+            <a href="#" aria-label="SoDak Sweet Tooth on TikTok"><svg width="16" height="16" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about-contact.html">About Us</a></li>
+            <li><a href="about-contact.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="cart.html">Track My Order</a></li>
+            <li><a href="about-contact.html#contact">Shipping &amp; Returns</a></li>
+            <li><a href="about-contact.html#contact">FAQs</a></li>
+            <li><a href="about-contact.html#contact">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>hello@sodaksweettooth.com</li>
+            <li>(605) 555-0142</li>
+            <li>Sioux Falls, South Dakota</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 SoDak Sweet Tooth. All rights reserved.</span>
+        <span class="payment-icons">Visa · Mastercard · PayPal</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Show mobile close button only when panel is styled as an overlay (handled via CSS media query already);
+    // this just ensures the close button is visible on small screens once JS confirms layout.
+    function syncFilterCloseVisibility() {
+      var closeBtn = document.getElementById('filter-panel-close');
+      if (window.innerWidth <= 768) { closeBtn.style.display = 'block'; } else { closeBtn.style.display = 'none'; }
+    }
+    window.addEventListener('resize', syncFilterCloseVisibility);
+    syncFilterCloseVisibility();
+  </script>
+</body>
+
+</html>
